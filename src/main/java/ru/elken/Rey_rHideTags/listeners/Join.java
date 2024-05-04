@@ -1,13 +1,13 @@
-package ru.rey.rhidetags.listeners;
+package ru.elken.Rey_rHideTags.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import ru.rey.rhidetags.Core;
+import ru.elken.Rey_rHideTags.Main;
 
-public class PlayerJoin implements Listener {
+public class Join implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
-        Core.hideName(event.getPlayer());
+        Main.hideName(event.getPlayer());
     }
 }

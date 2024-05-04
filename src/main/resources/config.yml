@@ -1,1 +1,10 @@
-message: '$name'
+# rHideTags by Rey
+# Updated by zoga-com & mrElken
+#
+# Plugin support Legacy color codes & HEX colors
+
+actionbar: true
+actionbar_message: '$name'
+
+chat: true
+chat_message: 'Player - $name'

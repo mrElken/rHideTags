@@ -53,7 +53,7 @@ public final class Main extends JavaPlugin implements TabCompleter {
 
         // Сообщение о включении
         this.getLogger().info("");
-        this.getLogger().info("\033[38;5;220mrHideTags \033[38;5;231m| \033[38;5;231mrHideTags 1.2.0 successfully enabled\033[0m");
+        this.getLogger().info("\033[38;5;220mrHideTags \033[38;5;231m| \033[38;5;231mrHideTags 1.2.1 successfully enabled\033[0m");
         this.getLogger().info("\033[38;5;220mrHideTags \033[38;5;231m| \033[38;5;118mCreated by: \033[38;5;231mRey (vk.com/omashune)\033[0m");
         this.getLogger().info("\033[38;5;220mrHideTags \033[38;5;231m| \033[38;5;45mUpdated by: \033[38;5;231mzoga-com & mrElken\033[0m");
         this.getLogger().info("");
@@ -84,7 +84,7 @@ public final class Main extends JavaPlugin implements TabCompleter {
         chat_message = Main.main.getConfig().getString("chat_message");
     }
 
-    // Поддержка Legacy кодов и HEX (Спасибо Overwrite)
+    // Поддержка Legacy и HEX кодов (Спасибо Overwrite, самому писать лень)
     public static String colors(String message) {
         String version = Bukkit.getServer().getClass().getPackage().getName().replace(".", ",").split(",")[3];
         int subVersion = Integer.parseInt(

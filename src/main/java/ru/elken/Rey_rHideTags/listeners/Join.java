@@ -8,6 +8,8 @@ import ru.elken.Rey_rHideTags.Main;
 public class Join implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
-        Main.hideName(event.getPlayer());
+        Main.hideName(
+                event.getPlayer()
+        );
     }
 }

@@ -1,6 +1,6 @@
 package ru.elken.Rey_rHideTags.listeners;
 
-import net.kyori.adventure.text.TextComponent;
+import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -28,11 +28,14 @@ public class Interact implements Listener {
                   && !e.getPlayer().getGameMode().equals(GameMode.SPECTATOR))
         ) return;
 
+        Player p = Bukkit.getPlayer(e.getRightClicked().getUniqueId());
         if (Main.actionbar) {
             e.getPlayer().sendActionBar(
                     LegacyComponentSerializer.legacySection().deserialize(
                             colors(
-                                    Main.actionbar_message.replace("$name", ((TextComponent) ((Player) e.getRightClicked()).displayName()).content())
+                                    PlaceholderAPI.setPlaceholders(p,
+                                            Main.actionbar_message.replace("$name", p.getName())
+                                    )
                             )
                     )
             );
@@ -44,7 +47,9 @@ public class Interact implements Listener {
             )) {
                 e.getPlayer().sendMessage(
                         colors(
-                                Main.chat_message.replace("$name", ((TextComponent) ((Player) e.getRightClicked()).displayName()).content())
+                                PlaceholderAPI.setPlaceholders(p,
+                                        Main.chat_message.replace("$name", p.getName())
+                                )
                         )
                 );
                 triggered.put(

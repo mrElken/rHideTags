@@ -4,6 +4,7 @@ main: ru.elken.Rey_rHideTags.Main
 api-version: 1.20
 authors: [Rey, zoga-com, mrElken]
 description: Plugin to hide players nametags
+softdepend: [PlaceholderAPI]
 commands:
   rht:
     description: rHideTags command
